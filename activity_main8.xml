@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity6"
+    android:background="#FDFDFD">
+
+
+    <RelativeLayout
+        android:id="@+id/top1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/backwardarrow"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alia James"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/videocall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/videocall"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/telephone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/telephone"
+            android:layout_toLeftOf="@+id/videocall"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/img3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/top1"
+        android:layout_marginTop="20dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/viewprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#CDC7C1"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Profile"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/messagesend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#988B7E"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="Typing..."
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/sendmessage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/messagesend"
+        android:layout_below="@+id/viewprofile">
+
+        <LinearLayout
+            android:id="@+id/message1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img3"
+                android:layout_marginStart="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/m1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#CDC7C1"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Good to know  "
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:34"
+            android:textColor="@color/black"
+            android:layout_below="@+id/message1"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="-28dp"
+            android:textSize="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/message2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@+id/m3"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/i2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/img3"
+                android:layout_marginStart="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#CDC7C1"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Hi, I am great, Wbu ? "
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:33"
+            android:textColor="@color/black"
+            android:layout_below="@+id/message2"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="-18dp"
+            android:textSize="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/m3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#CDC7C1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@+id/message1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  I am doing well  "
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:textSize="15dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:33"
+            android:textColor="@color/black"
+            android:layout_below="@+id/m3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="-12dp"
+            android:textSize="10dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/m4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#CDC7C1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@+id/message2">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Hello, How are you?  "
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:textSize="15dp"/>
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:32"
+            android:textColor="@color/black"
+            android:layout_below="@+id/m4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="-12dp"
+            android:textSize="10dp"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

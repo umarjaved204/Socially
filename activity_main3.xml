@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- 🔹 Status bar row (time, icons, punch-hole circle) -->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="9:30"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/circle"
+        android:contentDescription="Camera Hole Icon" />
+
+    <ImageView
+        android:id="@+id/iv_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/iv_cellular"
+        android:layout_toRightOf="@id/iv_circle"
+        android:src="@drawable/Wifi"
+        android:contentDescription="WiFi Icon"
+        android:padding="8dp"
+        android:layout_marginStart="38dp" />
+
+    <ImageView
+        android:id="@+id/iv_cellular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/iv_battery"
+        android:src="@drawable/Cellular"
+        android:contentDescription="Cellular Icon"
+        android:padding="8dp"
+        android:layout_marginEnd="4dp" />
+
+    <ImageView
+        android:id="@+id/iv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/Battery"
+        android:contentDescription="Battery Icon"
+        android:padding="8dp" />
+
+    <!-- 🔹 Back arrow -->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Back Button"
+        android:src="@drawable/Back" />
+
+    <!-- 🔹 Title -->
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Socially"
+        android:textColor="@color/maroon"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- 🔹 Username field -->
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_logo"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/edittext_background"
+        android:hint="asad_khasanov"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <!-- 🔹 Password field -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_username"
+        android:layout_marginTop="12dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <!-- 🔹 Forgot password -->
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Forgot password?"
+        android:textColor="#9C4A46"
+        android:textSize="14sp" />
+
+    <!-- 🔹 Login button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_forgot_password"
+        android:layout_marginTop="16dp"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:backgroundTint="#9C4A46"
+        android:textColor="@android:color/white" />
+
+    <!-- 🔹 Divider with OR -->
+    <LinearLayout
+        android:id="@+id/layout_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textColor="@android:color/darker_gray"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- 🔹 Sign up -->
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_or"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Don’t have an account? Sign up."
+        android:textColor="#9C4A46"
+        android:textSize="14sp" />
+
+    <!-- 🔹 Footer -->
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Socially"
+        android:textColor="#9C4A46"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+</RelativeLayout>

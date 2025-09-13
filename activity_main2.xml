@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- 🔹 Status Bar Row (from your shared XML) -->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="9:30"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/circle"
+        android:contentDescription="Camera Hole Icon" />
+
+    <ImageView
+        android:id="@+id/iv_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/iv_cellular"
+        android:src="@drawable/Wifi"
+        android:contentDescription="WiFi Icon"
+        android:padding="8dp"
+        android:layout_marginEnd="4dp" />
+
+    <ImageView
+        android:id="@+id/iv_cellular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/iv_battery"
+        android:src="@drawable/Cellular"
+        android:contentDescription="Cellular Data Icon"
+        android:padding="8dp"
+        android:layout_marginEnd="4dp" />
+
+    <ImageView
+        android:id="@+id/iv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/Battery"
+        android:contentDescription="Battery Icon"
+        android:padding="8dp" />
+
+    <!-- 🔹 Main App Content -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socially"
+            android:textColor="#9C4A46"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/Profile"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Profile Picture"
+            android:clipToOutline="true" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jacob_w"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:textAllCaps="false"
+            android:backgroundTint="#9C4A46"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Switch Accounts -->
+        <TextView
+            android:id="@+id/tv_switch_accounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch accounts"
+            android:textSize="14sp"
+            android:textColor="#9C4A46"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Sign Up Section -->
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don’t have an account? Sign up."
+            android:textSize="14sp"
+            android:textColor="#9C4A46"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>
