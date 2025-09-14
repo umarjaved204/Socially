@@ -1,291 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity6"
-    android:background="#FDFDFD">
+    android:background="#FFFFFF">
 
-
+    <!-- Status Bar -->
     <RelativeLayout
-        android:id="@+id/top1"
+        android:id="@+id/statusBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/backwardarrow"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"/>
+        android:background="#FFFFFF">
 
         <TextView
-            android:textColor="@color/black"
-            android:textSize="30dp"
+            android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alia James"
-            android:layout_toRightOf="@+id/imageView"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold"/>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:text="9:30"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp" />
 
         <ImageView
-            android:id="@+id/videocall"
+            android:id="@+id/iv_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/circle"
+            android:contentDescription="Camera Hole Icon" />
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/iv_cellular"
+            android:src="@drawable/Wifi"
+            android:contentDescription="WiFi Icon"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp" />
+
+        <ImageView
+            android:id="@+id/iv_cellular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/iv_battery"
+            android:src="@drawable/Cellular"
+            android:contentDescription="Cellular Data Icon"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp" />
+
+        <ImageView
+            android:id="@+id/iv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/Battery"
+            android:contentDescription="Battery Icon"
+            android:padding="8dp" />
+
+    </RelativeLayout>
+
+    <!-- Chat Header -->
+    <LinearLayout
+        android:id="@+id/chatHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:layout_below="@id/statusBar">
+
+        <ImageView
+            android:id="@+id/btnBackFromChat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/videocall"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"/>
-
-        <ImageView
-            android:id="@+id/telephone"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/telephone"
-            android:layout_toLeftOf="@+id/videocall"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="5dp"
-            />
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/img3"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/top1"
-        android:layout_marginTop="20dp"/>
-
-
-    <RelativeLayout
-        android:id="@+id/viewprofile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="#CDC7C1"
-        android:layout_marginTop="20dp"
-        android:layout_centerInParent="true">
+            android:src="@drawable/ic_profile"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvChatUserName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="View Profile"
-            android:textColor="@color/black"
-            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="internshala"
             android:textStyle="bold"
-            android:padding="10dp"
-            android:textSize="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/messagesend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="#988B7E"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_centerInParent="true">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:hint="Typing..."
-            android:textColor="@color/black"
-            android:padding="10dp"
-            android:textSize="20dp"/>
+            android:textSize="18sp"
+            android:textColor="#000000" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/sendmessage"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"/>
+            android:id="@+id/btnVideoCall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="Video Call"
+            android:layout_marginEnd="16dp" />
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/btnInfo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_add"
+            android:contentDescription="Info" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/messagesend"
-        android:layout_below="@+id/viewprofile">
+    </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/message1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp">
-
-            <ImageView
-                android:id="@+id/i1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/img3"
-                android:layout_marginStart="20dp"/>
-
-            <RelativeLayout
-                android:id="@+id/m1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="#CDC7C1"
-                android:layout_marginStart="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Good to know  "
-                    android:textColor="@color/black"
-                    android:layout_centerInParent="true"
-                    android:padding="10dp"
-                    android:textSize="15dp"/>
-
-            </RelativeLayout>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10:34"
-            android:textColor="@color/black"
-            android:layout_below="@+id/message1"
-            android:layout_marginLeft="85dp"
-            android:layout_marginTop="-28dp"
-            android:textSize="10dp"/>
+    <!-- Chat Messages -->
+    <ScrollView
+        android:id="@+id/chatScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chatHeader"
+        android:layout_above="@id/chatInputBar"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:id="@+id/message2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_above="@+id/m3"
-            android:layout_marginBottom="10dp">
-
-            <ImageView
-                android:id="@+id/i2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/img3"
-                android:layout_marginStart="20dp"/>
-
-            <RelativeLayout
-                android:id="@+id/m2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="#CDC7C1"
-                android:layout_marginStart="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Hi, I am great, Wbu ? "
-                    android:textColor="@color/black"
-                    android:layout_centerInParent="true"
-                    android:padding="10dp"
-                    android:textSize="15dp"/>
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10:33"
-            android:textColor="@color/black"
-            android:layout_below="@+id/message2"
-            android:layout_marginLeft="85dp"
-            android:layout_marginTop="-18dp"
-            android:textSize="10dp"/>
-
-        <RelativeLayout
-            android:id="@+id/m3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:backgroundTint="#CDC7C1"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_above="@+id/message1">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:padding="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  I am doing well  "
-                android:textColor="@color/black"
-                android:layout_centerInParent="true"
-                android:padding="10dp"
-                android:textSize="15dp"/>
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10:33"
-            android:textColor="@color/black"
-            android:layout_below="@+id/m3"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="-12dp"
-            android:textSize="10dp"/>
-
-
-        <RelativeLayout
-            android:id="@+id/m4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:backgroundTint="#CDC7C1"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_above="@+id/message2">
+                android:text="4:49 PM"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
 
             <TextView
-                android:id="@+id/t1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  Hello, How are you?  "
-                android:textColor="@color/black"
-                android:layout_centerInParent="true"
-                android:padding="10dp"
-                android:textSize="15dp"/>
+                android:text="Hello"
+                android:background="@drawable/chat_bubble"
+                android:textColor="#FFFFFF"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="60dp"/>
 
+        </LinearLayout>
+    </ScrollView>
 
+    <!-- Chat Input Bar -->
+    <LinearLayout
+        android:id="@+id/chatInputBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp">
 
-        </RelativeLayout>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/Camera"
+            android:contentDescription="Camera" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="10:32"
-            android:textColor="@color/black"
-            android:layout_below="@+id/m4"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="-12dp"
-            android:textSize="10dp"/>
-    </RelativeLayout>
+            android:text="Message..."
+            android:textSize="16sp"
+            android:textColor="#888888"
+            android:layout_marginStart="8dp" />
 
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_mic"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Microphone" />
 
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/Picture"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Gallery" />
 
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/Union"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Add" />
+    </LinearLayout>
 
 </RelativeLayout>

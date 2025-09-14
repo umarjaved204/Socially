@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/editProfileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="16sp"
+            android:textColor="#3D92FF" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editProfileHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/ivEditProfilePic"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/ic_profile"
+                    android:background="@drawable/story_circle"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tvChangeProfilePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Profile Photo"
+                    android:textColor="#3D92FF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Name" />
+                <EditText style="@style/EditProfileValue" android:text="Jacob West" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Username" />
+                <EditText style="@style/EditProfileValue" android:text="jacob_w" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Website" />
+                <EditText style="@style/EditProfileValue" android:hint="Website" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Bio" />
+                <EditText style="@style/EditProfileValue" android:text="Digital goodies designer @pixsellz\nEverything is designed." />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Switch to Professional Account"
+                android:textColor="#3D92FF"
+                android:textStyle="bold"
+                android:padding="16dp" />
+            <View style="@style/EditProfileDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Private Information"
+                android:textColor="#888888"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Email" />
+                <TextView style="@style/EditProfileValue" android:text="jacob.west@gmail.com" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Phone" />
+                <TextView style="@style/EditProfileValue" android:text="+1 202 555 0147" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+            <LinearLayout style="@style/EditProfileRow">
+                <TextView style="@style/EditProfileLabel" android:text="Gender" />
+                <TextView style="@style/EditProfileValue" android:text="Male" />
+            </LinearLayout>
+            <View style="@style/EditProfileDivider" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

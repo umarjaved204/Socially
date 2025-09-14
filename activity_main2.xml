@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:id="@+id/main"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:padding="16dp">
 
-    <!-- 🔹 Status Bar Row (from your shared XML) -->
+    <!-- Status Bar Row -->
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="wrap_content"
@@ -59,12 +59,25 @@
         android:contentDescription="Battery Icon"
         android:padding="8dp" />
 
-    <!-- 🔹 Main App Content -->
+    <!-- Sign Up TextView at Bottom -->
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Don’t have an account? Sign up."
+        android:textSize="14sp"
+        android:textColor="#9C4A46"
+        android:paddingBottom="16dp" />
+
+    <!-- Main App Content -->
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_time"
+        android:layout_above="@id/tv_sign_up"
         android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
@@ -102,7 +115,7 @@
             android:textColor="@android:color/black"
             android:layout_marginBottom="20dp" />
 
-        <!-- Login Button -->
+
         <Button
             android:id="@+id/btn_login"
             android:layout_width="250dp"
@@ -113,7 +126,7 @@
             android:textColor="@android:color/white"
             android:layout_marginBottom="12dp" />
 
-        <!-- Switch Accounts -->
+
         <TextView
             android:id="@+id/tv_switch_accounts"
             android:layout_width="wrap_content"
@@ -123,15 +136,6 @@
             android:textColor="#9C4A46"
             android:layout_marginBottom="40dp" />
 
-        <!-- Sign Up Section -->
-        <TextView
-            android:id="@+id/tv_sign_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don’t have an account? Sign up."
-            android:textSize="14sp"
-            android:textColor="#9C4A46"
-            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
 </RelativeLayout>

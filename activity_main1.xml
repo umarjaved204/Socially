@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#A52A2A">
+
+    <!-- Status Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A52A2A">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:text="9:30 "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/circle"
+            android:contentDescription="Circle Icon" />
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/iv_cellular"
+            android:layout_toRightOf="@id/iv_circle"
+            android:src="@drawable/Wifi"
+            android:contentDescription="WiFi Icon"
+            android:padding="8dp"
+            android:layout_marginStart="38dp" />
+
+        <ImageView
+            android:id="@+id/iv_cellular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/iv_battery"
+            android:src="@drawable/Cellular"
+            android:contentDescription="Cellular Data Icon"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/Battery"
+            android:contentDescription="Battery Icon"
+            android:padding="8dp" />
+
+    </RelativeLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Socially"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create An Account and Sign Up"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_camera"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:text="tejpatil064"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:text="Tejas"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Last name"
+            android:text="Patil"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth"
+            android:text="02 - 09 - 2003"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:text="Enter E-mail"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:text="......"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create an Account"
+            android:background="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnCreateAccount" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A52A2A"
+    tools:context=".VideoCallActivity">
+
+    <LinearLayout
+        android:id="@+id/profileInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivCallerProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Caller Profile Picture"
+            android:background="@drawable/circle_image_bg"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mother"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCallTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="03:12"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/callControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnOptions"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_button_bg"
+            android:src="@drawable/ic_heart"
+            android:contentDescription="Menu"
+            android:padding="16dp"
+            android:layout_marginEnd="32dp" />
+
+        <ImageView
+            android:id="@+id/btnEndCall"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/end_call_bg"
+            android:src="@drawable/end_call_bg"
+            android:contentDescription="End Call"
+            android:padding="20dp"
+            android:layout_marginEnd="32dp" />
+
+        <ImageView
+            android:id="@+id/btnSpeaker"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_button_bg"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="Sound"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

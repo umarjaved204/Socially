@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Story Image (fullscreen) -->
+    <ImageView
+        android:id="@+id/storyImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/story_image" />
+
+    <!-- Progress Bar at top -->
+    <View
+        android:id="@+id/progressBarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="30dp"
+        android:background="#40FFFFFF" />
+
+    <View
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        android:scaleX="0" />
+
+    <!-- Top Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginTop="40dp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/story_circle"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Username and Time -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Story"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2h"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- More options (3 dots) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_more"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Close button -->
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close_white" />
+    </LinearLayout>
+
+    <!-- Bottom Controls (only visible when tapped) -->
+    <LinearLayout
+        android:id="@+id/bottomControlsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bottom"
+        android:padding="16dp">
+
+        <!-- Message Input Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Camera -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_camera_white"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Message input -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/message_input_background"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send message"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Heart -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_heart_white" />
+        </LinearLayout>
+
+        <!-- Viewer Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_eye_white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seen by 142"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Left tap area (invisible) -->
+    <View
+        android:id="@+id/leftTapArea"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent" />
+
+    <!-- Right tap area (invisible) -->
+    <View
+        android:id="@+id/rightTapArea"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
